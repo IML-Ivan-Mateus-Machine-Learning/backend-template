@@ -39,10 +39,6 @@ dependencies = [
   "orjson>=3.9.10",
 ]
 
-[tool.pdm]
-package-type = "application"
-
-
 [project.optional-dependencies]
 docs = [
   "mkdocs>=1.5.3",
@@ -67,7 +63,7 @@ dev = [
 [tool.pdm.scripts]
 server.cmd = "python src/api/main.py"
 cli.cmd = "python src/cli/main.py"
-_.env_file.override = ".env"
+env_file.override = ".env"
 
 [tool.mypy]
 plugins = ["pydantic.mypy"]
